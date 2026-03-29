@@ -1,2 +1,2 @@
-# Projeto-Integrador - SIstema de Suporte e Transporte Universitário
+# Projeto-Integrador - Sistema de Suporte e Transporte Universitário
 
