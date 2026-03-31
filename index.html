@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -34,7 +34,7 @@
 
 <body>
     <!-- Controle de tema (CSS-only) -->
-    <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Ativar modo escuro">
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Ativar modo escuro" tabindex="-1">
 
     <!-- Estrutura principal da página -->
     <div class="site-shell">
@@ -50,6 +50,7 @@
                         UniBus
                     </a>
 
+                    <!-- Toggle de tema para mobile -->
                     <div class="theme-mobile-wrap">
                         <label class="theme-button-mobile" for="theme-toggle" aria-label="Alternar tema no celular">
                             <span class="material-symbols-outlined icon-dark">dark_mode</span>
@@ -78,7 +79,7 @@
 
         <!-- Conteúdo principal -->
         <main>
-            <!-- Hero section -->
+            <!-- Seção Hero -->
             <section id="inicio" class="hero">
                 <div class="container hero-content">
                     <img src="app/assets/img/bus-blue.png" alt="Ilustração de ônibus" class="hero-bus">
@@ -93,12 +94,12 @@
                         <p>Compare e encontre transportes para qualquer momento, com base na sua localização.</p>
 
                         <div class="hero-actions">
-                            <a href="#" class="btn btn-primary">
+                            <a href="#transportes" class="btn btn-primary">
                                 <span class="material-symbols-outlined hero-icon">location_on</span>
                                 <hr class="separator">
                                 Localize
                             </a>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="app/pages/em-manutencao.html" class="btn btn-secondary">
                                 <span class="material-symbols-outlined hero-icon">login</span>
                                 <hr class="separator">
                                 Entrar
@@ -110,32 +111,280 @@
                 </div>
             </section>
 
-            <!-- Seções institucionais -->
-            <section id="sobre">
-                <div class="container">
-                    <h2>Sobre Nós</h2>
-                    <p>Conteúdo sobre a empresa...</p>
+            <!-- Seção de Sobre nós -->
+            <section id="sobre" class="about-section">
+                <div class="container about-content">
+                    <div class="about-text">
+                        <span class="about-label">Quem somos</span>
+                        <h2>Encontre transportes com praticidade e segurança</h2>
+                        <p>Nossa plataforma foi desenvolvida para ajudar estudantes a encontrar e gerenciar opções de transporte de forma simples e eficiente. Oferecemos suporte completo para facilitar o dia a dia acadêmico com mais praticidade e segurança.</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-card">
+                                <div class="feature-icon-box">
+                                    <span class="material-symbols-outlined feature-icon">directions_bus</span>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Busca de transportes</h3>
+                                    <p>Encontre opções de transporte disponíveis com base na sua localização e horários.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon-box">
+                                    <span class="material-symbols-outlined feature-icon">support_agent</span>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Suporte ao estudante</h3>
+                                    <p>Acesse ajuda rápida para dúvidas, problemas ou informações sobre transporte.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon-box">
+                                    <span class="material-symbols-outlined feature-icon">check_circle</span>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Organização de rotas</h3>
+                                    <p>Planeje seus trajetos com mais eficiência e evite atrasos no seu dia a dia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <div class="logo-circle">
+                            <div class="logo-inner">
+                                <span class="material-symbols-outlined">directions_bus</span>
+                                <p>Imagem da Logo</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section id="transportes">
+            <!-- Seção de Transportes -->
+            <section id="transportes" class="transport-section">
                 <div class="container">
-                    <h2>Transportes</h2>
-                    <p>Conteúdo sobre os transportes...</p>
+                    <div class="transport-header">
+                        <span class="transport-kicker">
+                            <span class="material-symbols-outlined">directions_bus</span>
+                            Suporte e Transportes universitárias
+                        </span>
+                        <h2>Interior e Região metropolitana</h2>
+                        <p>Pontue os principais terminais para organizar caronas, rotas intermunicipais e deslocamentos acadêmicos com mais segurança.</p>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="transport-map-wrap" role="region" aria-label="Mapa de terminais universitários entre interior e São Paulo">
+                            <!-- Visual search only: UI placeholder until JS search is enabled -->
+                            <div class="transport-search" aria-hidden="true">
+                                <span class="material-symbols-outlined">search</span>
+                                <input type="text" placeholder="Pesquisar terminal para carona" tabindex="-1">
+                            </div>
+
+                            <iframe
+                                title="Mapa de terminais universitários"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=-50.7000%2C-24.2500%2C-46.2000%2C-22.1000&amp;layer=mapnik">
+                            </iframe>
+
+                            <!-- Fixed pins for key campus commute hubs in the current map crop -->
+                            <span class="transport-pin pin-sao-paulo">Terminal Tietê (SP)</span>
+                            <span class="transport-pin pin-barueri">Barueri</span>
+                            <span class="transport-pin pin-bauru">Bauru</span>
+                            <span class="transport-pin pin-marilia">Marília</span>
+                            <span class="transport-pin pin-assis">Assis</span>
+                            <span class="transport-pin pin-ourinhos">Ourinhos</span>
+                        </div>
+
+                        <aside class="transport-sidebar" aria-label="Pontos e status do transporte">
+                            <div class="transport-filters" aria-label="Filtros de modal">
+                                <button type="button">Metrô</button>
+                                <button type="button">CPTM</button>
+                                <button type="button">Ônibus</button>
+                                <button type="button">Intermunicipal</button>
+                            </div>
+
+                            <div class="transport-points">
+                                <h3>Terminais para caronas</h3>
+                                <ul>
+                                    <li>
+                                        <span class="material-symbols-outlined">directions_bus</span>
+                                        <div>
+                                            <strong>Terminal Tietê (São Paulo)</strong>
+                                            <p>Ponto principal para saídas da capital ao interior</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="material-symbols-outlined">directions_bus</span>
+                                        <div>
+                                            <strong>Terminal de Barueri</strong>
+                                            <p>Integração metropolitana para facilitar encontros de carona</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="material-symbols-outlined">school</span>
+                                        <div>
+                                            <strong>Terminais de Assis, Marília e Bauru</strong>
+                                            <p>Referências de apoio para estudantes universitários do interior</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="material-symbols-outlined">school</span>
+                                        <div>
+                                            <strong>Terminal de Ourinhos</strong>
+                                            <p>Ponto de apoio para estudantes do interior</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="transport-status">
+                                <!-- Color bullets mirror each line identity for faster status reading -->
+                                <h3>Status em tempo real</h3>
+                                <p><span class="status-indicator status-vermelha"></span>Linha 3 - Vermelha: operação normal</p>
+                                <p><span class="status-indicator status-esmeralda"></span>Linha 9 - Esmeralda: fluxo moderado</p>
+                            </div>
+                        </aside>
+                    </div>
                 </div>
             </section>
 
-            <section id="serviços">
+            <section id="serviços" class="services-section">
                 <div class="container">
-                    <h2>Serviços</h2>
-                    <p>Conteúdo sobre os serviços...</p>
+                    <div class="services-header">
+                        <span class="services-kicker">Recursos disponíveis</span>
+                        <h2>Serviços completos para sua mobilidade</h2>
+                        <p>Oferecemos ferramentas práticas para facilitar seus deslocamentos acadêmicos com segurança e confiança.</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon-box">
+                                <span class="material-symbols-outlined service-icon">route</span>
+                            </div>
+                            <div class="service-text">
+                                <h3>Planejamento de Rotas</h3>
+                                <p>Organize seus trajetos de forma eficiente, visualizando as melhores opções entre terminais e pontos de parada.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon-box">
+                                <span class="material-symbols-outlined service-icon">group</span>
+                            </div>
+                            <div class="service-text">
+                                <h3>Comunidade de Caronas</h3>
+                                <p>Conecte-se com outros estudantes para compartilhar caronas, reduzir custos e criar uma rede de solidariedade.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon-box">
+                                <span class="material-symbols-outlined service-icon">verified_user</span>
+                            </div>
+                            <div class="service-text">
+                                <h3>Segurança no Trajeto</h3>
+                                <p>Acompanhamento de viagens em tempo real com compartilhamento de localização e avaliações de confiança.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon-box">
+                                <span class="material-symbols-outlined service-icon">star_rate</span>
+                            </div>
+                            <div class="service-text">
+                                <h3>Avaliação de Motoristas</h3>
+                                <p>Consulte notas e comentários de outros estudantes para escolher as melhores opções de transporte.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon-box">
+                                <span class="material-symbols-outlined service-icon">headset_mic</span>
+                            </div>
+                            <div class="service-text">
+                                <h3>Suporte 24h</h3>
+                                <p>Atendimento disponível em qualquer hora para dúvidas, problemas ou emergências durante seus trajetos.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon-box">
+                                <span class="material-symbols-outlined service-icon">hub</span>
+                            </div>
+                            <div class="service-text">
+                                <h3>Integração de Transportes</h3>
+                                <p>Acesse informações consolidadas sobre metrô, CPTM, ônibus e caronas em uma única plataforma.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section id="ajuda">
+            <!-- Seção de Ajuda -->
+            <section id="ajuda" class="help-section">
                 <div class="container">
-                    <h2>Ajuda</h2>
-                    <p>Conteúdo de ajuda e suporte...</p>
+                    <div class="help-card">
+                        <div class="help-contact-column">
+                            <div class="help-contact-item">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <div class="help-contact-content">
+                                    <h3>Localização</h3>
+                                    <p>Rua Washington Luiz, 500, Ourinhos - SP</p>
+                                </div>
+                            </div>
+                            <div class="help-contact-item">
+                                <span class="material-symbols-outlined">call</span>
+                                <div class="help-contact-content">
+                                    <h3>Telefone</h3>
+                                    <p>+55 (14) 4002-8922</p>
+                                </div>
+                            </div>
+                            <div class="help-contact-item">
+                                <span class="material-symbols-outlined">mail</span>
+                                <div class="help-contact-content">
+                                    <h3>E-mail</h3>
+                                    <p>unibus@transporte.com.br</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="help-form" action="#" method="post">
+                            <p class="help-form-kicker">Precisa de ajuda?</p>
+                            <h2>Envie um email</h2>
+
+                            <div class="help-form-grid">
+                                <label class="help-form-input-group">
+                                    <span class="material-symbols-outlined help-form-icon">person</span>
+                                    Nome
+                                    <input type="text" name="nome" autocomplete="name" placeholder="Ex. Charles">
+                                </label>
+                                <label class="help-form-input-group">
+                                    <span class="material-symbols-outlined help-form-icon">person</span>
+                                    Sobrenome
+                                    <input type="text" name="sobrenome" autocomplete="family-name" placeholder="Ex. Sanchez">
+                                </label>
+                                <label class="help-form-input-group">
+                                    <span class="material-symbols-outlined help-form-icon">mail</span>
+                                    E-mail
+                                    <input type="email" name="email" autocomplete="email" placeholder="Ex. charles@gmail.com">
+                                </label>
+                                <label class="help-form-input-group">
+                                    <span class="material-symbols-outlined help-form-icon">description</span>
+                                    Assunto
+                                    <input type="text" name="assunto" placeholder="Ex. UniBus">
+                                </label>
+                            </div>
+
+                            <label class="help-message-field">
+                                Mensagem
+                                <textarea name="mensagem"></textarea>
+                            </label>
+
+                            <button type="submit" class="help-submit">Enviar</button>
+                        </form>
+                    </div>
                 </div>
             </section>
         </main>
@@ -230,3 +479,5 @@
 </body>
 
 </html>
+
+
