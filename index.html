@@ -4,7 +4,7 @@
 <head>
     <!-- Metadados base -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <!-- SEO básico -->
     <meta name="description"
@@ -24,12 +24,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="app/style/style.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -151,12 +145,7 @@
                     </div>
                     
                     <div class="about-image">
-                        <div class="logo-circle">
-                            <div class="logo-inner">
-                                <span class="material-symbols-outlined">directions_bus</span>
-                                <p>Imagem da Logo</p>
-                            </div>
-                        </div>
+                        <img src="app/assets/img/about-bus.png" alt="Ilustração de ônibus para mobilidade estudantil">
                     </div>
                 </div>
             </section>
@@ -175,10 +164,17 @@
 
                     <div class="transport-card">
                         <div class="transport-map-wrap" role="region" aria-label="Mapa de terminais universitários entre interior e São Paulo">
-                            <!-- Visual search only: UI placeholder until JS search is enabled -->
                             <div class="transport-search" aria-hidden="true">
                                 <span class="material-symbols-outlined">search</span>
-                                <input type="text" placeholder="Pesquisar terminal para carona" tabindex="-1">
+                                <input type="text" placeholder="Pesquisar terminal para carona" tabindex="-1" list="terminals">
+                                <datalist id="terminals">
+                                    <option value="Terminal Tietê (São Paulo)"></option>
+                                    <option value="Terminal de Barueri"></option>
+                                    <option value="Bauru"></option>
+                                    <option value="Marília"></option>
+                                    <option value="Assis"></option>
+                                    <option value="Ourinhos"></option>
+                                </datalist>
                             </div>
 
                             <iframe
@@ -188,7 +184,6 @@
                                 src="https://www.openstreetmap.org/export/embed.html?bbox=-50.7000%2C-24.2500%2C-46.2000%2C-22.1000&amp;layer=mapnik">
                             </iframe>
 
-                            <!-- Fixed pins for key campus commute hubs in the current map crop -->
                             <span class="transport-pin pin-sao-paulo">Terminal Tietê (SP)</span>
                             <span class="transport-pin pin-barueri">Barueri</span>
                             <span class="transport-pin pin-bauru">Bauru</span>
@@ -240,7 +235,6 @@
                             </div>
 
                             <div class="transport-status">
-                                <!-- Color bullets mirror each line identity for faster status reading -->
                                 <h3>Status em tempo real</h3>
                                 <p><span class="status-indicator status-vermelha"></span>Linha 3 - Vermelha: operação normal</p>
                                 <p><span class="status-indicator status-esmeralda"></span>Linha 9 - Esmeralda: fluxo moderado</p>
@@ -250,6 +244,7 @@
                 </div>
             </section>
 
+            <!-- Seção de Cards dos Serviços -->
             <section id="serviços" class="services-section">
                 <div class="container">
                     <div class="services-header">
@@ -403,17 +398,6 @@
                         Plataforma para comparar rotas, horários e opções de mobilidade urbana com foco em praticidade e
                         segurança.
                     </p>
-                    <div class="footer-social" aria-label="Redes sociais">
-                        <a href="#" aria-label="Instagram">
-                            <span class="material-symbols-outlined">photo_camera</span>
-                        </a>
-                        <a href="#" aria-label="LinkedIn">
-                            <span class="material-symbols-outlined">business_center</span>
-                        </a>
-                        <a href="#" aria-label="YouTube">
-                            <span class="material-symbols-outlined">smart_display</span>
-                        </a>
-                    </div>
                 </div>
 
                 <div class="footer-column">
