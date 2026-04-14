@@ -24,6 +24,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="app/style/style.css">
+
+    <!-- Animações -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
@@ -33,7 +36,7 @@
     <!-- Estrutura principal da página -->
     <div class="site-shell">
         <!-- Header / Navegação -->
-        <header class="site-header">
+        <header class="site-header animate__animated animate__fadeInDown reveal-soft">
             <div class="container header-content">
                 <!-- Linha superior responsiva: marca + toggle mobile -->
                 <div class="between-responsive">
@@ -76,24 +79,24 @@
             <!-- Seção Hero -->
             <section id="inicio" class="hero">
                 <div class="container hero-content">
-                    <img src="app/assets/img/bus-blue.png" alt="Ilustração de ônibus" class="hero-bus">
+                    <img src="app/assets/img/bus-blue.png" alt="Ilustração de ônibus" class="hero-bus animate__animated animate__fadeInLeft reveal-soft reveal-delay-2">
 
                     <!-- Bloco principal de texto e ações -->
                     <div class="hero-text">
-                        <span class="hero-badge">
+                        <span class="hero-badge animate__animated animate__fadeInUp reveal-soft reveal-delay-1">
                             <span class="material-symbols-outlined hero-icon">directions_bus</span>
                             Transporte inteligente
                         </span>
-                        <h1>Planeje seu destino com os transportes disponíveis</h1>
-                        <p>Compare e encontre transportes para qualquer momento, com base na sua localização.</p>
+                        <h1 class="animate__animated animate__fadeInUp reveal-soft reveal-delay-2">Planeje seu destino com os transportes disponíveis</h1>
+                        <p class="animate__animated animate__fadeInUp reveal-soft reveal-delay-3">Compare e encontre transportes para qualquer momento, com base na sua localização.</p>
 
-                        <div class="hero-actions">
+                        <div class="hero-actions animate__animated animate__fadeInUp reveal-soft reveal-delay-4">
                             <a href="#transportes" class="btn btn-primary">
                                 <span class="material-symbols-outlined hero-icon">location_on</span>
                                 <hr class="separator">
                                 Localize
                             </a>
-                            <a href="app/pages/em-manutencao.html" class="btn btn-secondary">
+                            <a href="form/sign_in.html" class="btn btn-secondary">
                                 <span class="material-symbols-outlined hero-icon">login</span>
                                 <hr class="separator">
                                 Entrar
@@ -101,20 +104,20 @@
                         </div>
                     </div>
 
-                    <img src="app/assets/img/map.png" alt="Ícone de localização" class="hero-map">
+                    <img src="app/assets/img/map.png" alt="Ícone de localização" class="hero-map animate__animated animate__fadeInRight reveal-soft reveal-delay-3">
                 </div>
             </section>
 
             <!-- Seção de Sobre nós -->
-            <section id="sobre" class="about-section">
+            <section id="sobre" class="about-section scroll-reveal">
                 <div class="container about-content">
-                    <div class="about-text">
-                        <span class="about-label">Quem somos</span>
-                        <h2>Encontre transportes com praticidade e segurança</h2>
-                        <p>Nossa plataforma foi desenvolvida para ajudar estudantes a encontrar e gerenciar opções de transporte de forma simples e eficiente. Oferecemos suporte completo para facilitar o dia a dia acadêmico com mais praticidade e segurança.</p>
+                    <div class="about-text scroll-reveal reveal-delay-1">
+                        <span class="about-label scroll-reveal reveal-delay-1">Quem somos</span>
+                        <h2 class="scroll-reveal reveal-delay-2">Encontre transportes com praticidade e segurança</h2>
+                        <p class="scroll-reveal reveal-delay-3">Nossa plataforma foi desenvolvida para ajudar estudantes a encontrar e gerenciar opções de transporte de forma simples e eficiente. Oferecemos suporte completo para facilitar o dia a dia acadêmico com mais praticidade e segurança.</p>
                         
                         <div class="about-features">
-                            <div class="feature-card">
+                            <div class="feature-card scroll-reveal reveal-delay-1">
                                 <div class="feature-icon-box">
                                     <span class="material-symbols-outlined feature-icon">directions_bus</span>
                                 </div>
@@ -123,7 +126,7 @@
                                     <p>Encontre opções de transporte disponíveis com base na sua localização e horários.</p>
                                 </div>
                             </div>
-                            <div class="feature-card">
+                            <div class="feature-card scroll-reveal reveal-delay-2">
                                 <div class="feature-icon-box">
                                     <span class="material-symbols-outlined feature-icon">support_agent</span>
                                 </div>
@@ -132,7 +135,7 @@
                                     <p>Acesse ajuda rápida para dúvidas, problemas ou informações sobre transporte.</p>
                                 </div>
                             </div>
-                            <div class="feature-card">
+                            <div class="feature-card scroll-reveal reveal-delay-3">
                                 <div class="feature-icon-box">
                                     <span class="material-symbols-outlined feature-icon">check_circle</span>
                                 </div>
@@ -144,26 +147,26 @@
                         </div>
                     </div>
                     
-                    <div class="about-image">
+                    <div class="about-image scroll-reveal reveal-delay-4">
                         <img src="app/assets/img/about-bus.png" alt="Ilustração de ônibus para mobilidade estudantil">
                     </div>
                 </div>
             </section>
 
             <!-- Seção de Transportes -->
-            <section id="transportes" class="transport-section">
+            <section id="transportes" class="transport-section scroll-reveal reveal-delay-1">
                 <div class="container">
-                    <div class="transport-header">
-                        <span class="transport-kicker">
+                    <div class="transport-header scroll-reveal reveal-delay-1">
+                        <span class="transport-kicker scroll-reveal reveal-delay-1">
                             <span class="material-symbols-outlined">directions_bus</span>
                             Suporte e Transportes universitárias
                         </span>
-                        <h2>Interior e Região metropolitana</h2>
-                        <p>Pontue os principais terminais para organizar caronas, rotas intermunicipais e deslocamentos acadêmicos com mais segurança.</p>
+                        <h2 class="scroll-reveal reveal-delay-2">Interior e Região metropolitana</h2>
+                        <p class="scroll-reveal reveal-delay-3">Pontue os principais terminais para organizar caronas, rotas intermunicipais e deslocamentos acadêmicos com mais segurança.</p>
                     </div>
 
-                    <div class="transport-card">
-                        <div class="transport-map-wrap" role="region" aria-label="Mapa de terminais universitários entre interior e São Paulo">
+                    <div class="transport-card scroll-reveal reveal-delay-2">
+                        <div class="transport-map-wrap scroll-reveal reveal-delay-2" role="region" aria-label="Mapa de terminais universitários entre interior e São Paulo">
                             <div class="transport-search" aria-hidden="true">
                                 <span class="material-symbols-outlined">search</span>
                                 <input type="text" placeholder="Pesquisar terminal para carona" tabindex="-1" list="terminals">
@@ -192,15 +195,15 @@
                             <span class="transport-pin pin-ourinhos">Ourinhos</span>
                         </div>
 
-                        <aside class="transport-sidebar" aria-label="Pontos e status do transporte">
-                            <div class="transport-filters" aria-label="Filtros de modal">
+                        <aside class="transport-sidebar scroll-reveal reveal-delay-3" aria-label="Pontos e status do transporte">
+                            <div class="transport-filters scroll-reveal reveal-delay-3" aria-label="Filtros de modal">
                                 <button type="button">Metrô</button>
                                 <button type="button">CPTM</button>
                                 <button type="button">Ônibus</button>
                                 <button type="button">Intermunicipal</button>
                             </div>
 
-                            <div class="transport-points">
+                            <div class="transport-points scroll-reveal reveal-delay-4">
                                 <h3>Terminais para caronas</h3>
                                 <ul>
                                     <li>
@@ -234,7 +237,7 @@
                                 </ul>
                             </div>
 
-                            <div class="transport-status">
+                            <div class="transport-status scroll-reveal reveal-delay-4">
                                 <h3>Status em tempo real</h3>
                                 <p><span class="status-indicator status-vermelha"></span>Linha 3 - Vermelha: operação normal</p>
                                 <p><span class="status-indicator status-esmeralda"></span>Linha 9 - Esmeralda: fluxo moderado</p>
@@ -245,16 +248,16 @@
             </section>
 
             <!-- Seção de Cards dos Serviços -->
-            <section id="serviços" class="services-section">
+            <section id="serviços" class="services-section scroll-reveal reveal-delay-2">
                 <div class="container">
-                    <div class="services-header">
-                        <span class="services-kicker">Recursos disponíveis</span>
-                        <h2>Serviços completos para sua mobilidade</h2>
-                        <p>Oferecemos ferramentas práticas para facilitar seus deslocamentos acadêmicos com segurança e confiança.</p>
+                    <div class="services-header scroll-reveal reveal-delay-1">
+                        <span class="services-kicker scroll-reveal reveal-delay-1">Recursos disponíveis</span>
+                        <h2 class="scroll-reveal reveal-delay-2">Serviços completos para sua mobilidade</h2>
+                        <p class="scroll-reveal reveal-delay-3">Oferecemos ferramentas práticas para facilitar seus deslocamentos acadêmicos com segurança e confiança.</p>
                     </div>
 
                     <div class="services-grid">
-                        <div class="service-card">
+                        <div class="service-card scroll-reveal reveal-delay-1">
                             <div class="service-icon-box">
                                 <span class="material-symbols-outlined service-icon">route</span>
                             </div>
@@ -264,7 +267,7 @@
                             </div>
                         </div>
 
-                        <div class="service-card">
+                        <div class="service-card scroll-reveal reveal-delay-2">
                             <div class="service-icon-box">
                                 <span class="material-symbols-outlined service-icon">group</span>
                             </div>
@@ -274,7 +277,7 @@
                             </div>
                         </div>
 
-                        <div class="service-card">
+                        <div class="service-card scroll-reveal reveal-delay-3">
                             <div class="service-icon-box">
                                 <span class="material-symbols-outlined service-icon">verified_user</span>
                             </div>
@@ -284,7 +287,7 @@
                             </div>
                         </div>
 
-                        <div class="service-card">
+                        <div class="service-card scroll-reveal reveal-delay-1">
                             <div class="service-icon-box">
                                 <span class="material-symbols-outlined service-icon">star_rate</span>
                             </div>
@@ -294,7 +297,7 @@
                             </div>
                         </div>
 
-                        <div class="service-card">
+                        <div class="service-card scroll-reveal reveal-delay-2">
                             <div class="service-icon-box">
                                 <span class="material-symbols-outlined service-icon">headset_mic</span>
                             </div>
@@ -304,7 +307,7 @@
                             </div>
                         </div>
 
-                        <div class="service-card">
+                        <div class="service-card scroll-reveal reveal-delay-3">
                             <div class="service-icon-box">
                                 <span class="material-symbols-outlined service-icon">hub</span>
                             </div>
@@ -318,25 +321,25 @@
             </section>
 
             <!-- Seção de Ajuda -->
-            <section id="ajuda" class="help-section">
+            <section id="ajuda" class="help-section scroll-reveal reveal-delay-3">
                 <div class="container">
-                    <div class="help-card">
-                        <div class="help-contact-column">
-                            <div class="help-contact-item">
+                    <div class="help-card scroll-reveal reveal-delay-1">
+                        <div class="help-contact-column scroll-reveal reveal-delay-2">
+                            <div class="help-contact-item scroll-reveal reveal-delay-1">
                                 <span class="material-symbols-outlined">location_on</span>
                                 <div class="help-contact-content">
                                     <h3>Localização</h3>
                                     <p>Rua Washington Luiz, 500, Ourinhos - SP</p>
                                 </div>
                             </div>
-                            <div class="help-contact-item">
+                            <div class="help-contact-item scroll-reveal reveal-delay-2">
                                 <span class="material-symbols-outlined">call</span>
                                 <div class="help-contact-content">
                                     <h3>Telefone</h3>
                                     <p>+55 (14) 4002-8922</p>
                                 </div>
                             </div>
-                            <div class="help-contact-item">
+                            <div class="help-contact-item scroll-reveal reveal-delay-3">
                                 <span class="material-symbols-outlined">mail</span>
                                 <div class="help-contact-content">
                                     <h3>E-mail</h3>
@@ -345,39 +348,39 @@
                             </div>
                         </div>
 
-                        <form class="help-form" action="#" method="post">
-                            <p class="help-form-kicker">Precisa de ajuda?</p>
-                            <h2>Envie um email</h2>
+                        <form class="help-form scroll-reveal reveal-delay-3" action="#" method="post">
+                            <p class="help-form-kicker scroll-reveal reveal-delay-3">Precisa de ajuda?</p>
+                            <h2 class="scroll-reveal reveal-delay-4">Envie um email</h2>
 
                             <div class="help-form-grid">
                                 <label class="help-form-input-group">
                                     <span class="material-symbols-outlined help-form-icon">person</span>
                                     Nome
-                                    <input type="text" name="nome" autocomplete="name" placeholder="Ex. Charles">
+                                    <input type="text" name="nome" autocomplete="name" placeholder="Ex. Charles" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{2,50}" title="Digite entre 2 e 50 caracteres usando apenas letras, espaços, apóstrofo ou hífen.">
                                 </label>
                                 <label class="help-form-input-group">
                                     <span class="material-symbols-outlined help-form-icon">person</span>
                                     Sobrenome
-                                    <input type="text" name="sobrenome" autocomplete="family-name" placeholder="Ex. Sanchez">
+                                    <input type="text" name="sobrenome" autocomplete="family-name" placeholder="Ex. Sanchez" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{2,60}" title="Digite entre 2 e 60 caracteres usando apenas letras, espaços, apóstrofo ou hífen.">
                                 </label>
                                 <label class="help-form-input-group">
                                     <span class="material-symbols-outlined help-form-icon">mail</span>
                                     E-mail
-                                    <input type="email" name="email" autocomplete="email" placeholder="Ex. charles@gmail.com">
+                                    <input type="email" name="email" autocomplete="email" placeholder="Ex. charles@gmail.com" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" title="Digite um e-mail válido, como nome@dominio.com.">
                                 </label>
                                 <label class="help-form-input-group">
                                     <span class="material-symbols-outlined help-form-icon">description</span>
                                     Assunto
-                                    <input type="text" name="assunto" placeholder="Ex. UniBus">
+                                    <input type="text" name="assunto" placeholder="Ex. UniBus" required minlength="3" maxlength="80" pattern="[A-Za-zÀ-ÖØ-öø-ÿ0-9\s.,'!?()\-]{3,80}" title="Digite um assunto entre 3 e 80 caracteres.">
                                 </label>
                             </div>
 
                             <label class="help-message-field">
                                 Mensagem
-                                <textarea name="mensagem"></textarea>
+                                <textarea name="mensagem" required minlength="10" maxlength="1000" placeholder="Descreva sua dúvida"></textarea>
                             </label>
 
-                            <button type="submit" class="help-submit">Enviar</button>
+                            <button type="submit" class="help-submit scroll-reveal reveal-delay-4">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -385,7 +388,7 @@
         </main>
 
         <!-- Rodapé -->
-        <footer class="site-footer" aria-label="Rodapé institucional">
+        <footer class="site-footer scroll-reveal reveal-delay-4" aria-label="Rodapé institucional">
             <div class="container footer-grid">
                 <div class="footer-brand">
                     <a href="/" class="logo footer-logo" aria-label="Página inicial">
@@ -456,12 +459,10 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 </body>
 
 </html>
-
-
