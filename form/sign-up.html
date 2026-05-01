@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniBus | Cadastro</title>
+    <link rel="stylesheet" href="../app/style/style.css">
+    <link rel="stylesheet" href="../app/style/form.css">
+</head>
+
+<body>
+    <div class="layout">
+        <aside>
+            <div class="brand">
+                <div class="brand-row">
+                    <div class="brand-icon">
+                        <span class="material-symbols-outlined icon">directions_bus</span>
+                    </div>
+                    <span class="brand-name">UniBus</span>
+                </div>
+                <p class="brand-subtitle">A plataforma de suporte e transportes universitários</p>
+            </div>
+
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Crie sua conta</h2>
+                        <p class="card-description">Preencha os campos abaixo para se cadastrar</p>
+                    </div>
+
+                    <div class="card-content">
+                        <form class="form" action="#" method="post" novalidate>
+                            <div class="field">
+                                <label for="name">Nome completo</label>
+                                <div class="input-group">
+                                    <span class="input-addon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24">
+                                            <circle cx="12" cy="7" r="4" />
+                                            <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
+                                        </svg>
+                                    </span>
+                                    <input id="name" name="name" type="text" placeholder="Seu nome completo"
+                                        pattern="^[a-zA-Z\s]{2,}$" autocomplete="name" required />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="email">E-mail</label>
+                                <div class="input-group">
+                                    <span class="input-addon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24">
+                                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                                            <path d="m2 7 10 7 10-7" />
+                                        </svg>
+                                    </span>
+                                    <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com"
+                                        pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                                        autocomplete="email" required />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="two-cols">
+                                    <div class="col">
+                                        <label for="password">Senha</label>
+                                        <div class="input-group">
+                                            <span class="input-addon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24">
+                                                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                                </svg>
+                                            </span>
+                                            <input id="password" name="password" type="password"
+                                                placeholder="••••••••••••••••"
+                                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                                autocomplete="new-password" required />
+                                            <button type="button" class="toggle-password"
+                                                aria-label="Mostrar ou ocultar senha">
+                                                <svg viewBox="0 0 24 24">
+                                                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+                                                    <circle cx="12" cy="12" r="3" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="confirm-password">Confirmar senha</label>
+                                        <div class="input-group">
+                                            <span class="input-addon" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24">
+                                                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                                </svg>
+                                            </span>
+                                            <input id="confirm-password" name="confirm-password" type="password"
+                                                placeholder="••••••••••••••••"
+                                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                                autocomplete="new-password" required />
+                                            <button type="button" class="toggle-password"
+                                                aria-label="Mostrar ou ocultar senha">
+                                                <svg viewBox="0 0 24 24">
+                                                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+                                                    <circle cx="12" cy="12" r="3" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="checkbox-group">
+                                    <input id="terms" name="terms" type="checkbox" required />
+                                    <label for="terms">Eu concordo com a <a href="../app/pages/politica-de-privacidade.html">Política de Privacidade</a> e os <a
+                                            href="../app/pages/termos-de-uso.html">Termos de Serviço</a>.</label>
+                                </div>
+
+                                <button type="submit" class="btn-submit">Cadastrar</button>
+                                <div class="divider" aria-hidden="true">
+                                    <hr /><span>ou</span>
+                                    <hr />
+                                </div>
+                                <p class="signup-prompt">
+                                    Já possui uma conta?
+                                    <a href="sign-in.html">Faça login</a>
+                                </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <main>
+            <a href="../index.html" class="back-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m15 18-6-6 6-6" />
+                </svg>
+                Voltar
+            </a>
+
+            <img src="../public/image-form.svg" alt="Ilustração de estudantes e um ônibus escolar"
+                class="illustration" />
+        </main>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>
