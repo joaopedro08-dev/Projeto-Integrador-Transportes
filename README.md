@@ -74,8 +74,3 @@ Links nao finalizados podem apontar para a pagina de manutencao:
 - `app/pages/em-manutencao.html`
 
 Assim, o usuario sempre recebe uma resposta visual consistente, mesmo quando a funcionalidade ainda esta em desenvolvimento.
-
-## Status do Projeto
-
-Projeto em evolucao continua. A base da landing page esta pronta e organizada para receber novas melhorias (integracoes com busca real, dados dinamicos de linhas e autenticacao).
-

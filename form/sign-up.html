@@ -8,12 +8,13 @@
     <link rel="shortcut icon" href="../public/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../app/style/style.css">
     <link rel="stylesheet" href="../app/style/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
     <div class="layout">
-        <aside>
-            <div class="brand">
+        <aside class="animate__animated animate__fadeInLeft reveal-soft">
+            <div class="brand animate__animated animate__fadeInDown reveal-soft reveal-delay-1">
                 <div class="brand-row">
                     <div class="brand-icon">
                         <span class="material-symbols-outlined icon">directions_bus</span>
@@ -23,16 +24,16 @@
                 <p class="brand-subtitle">A plataforma de suporte e transportes universitários</p>
             </div>
 
-            <div class="card-wrap">
-                <div class="card">
-                    <div class="card-header">
+            <div class="card-wrap animate__animated animate__fadeInUp reveal-soft reveal-delay-2">
+                <div class="card animate__animated animate__fadeInUp reveal-soft reveal-delay-3">
+                    <div class="card-header animate__animated animate__fadeInUp reveal-soft reveal-delay-1">
                         <h2 class="card-title">Crie sua conta</h2>
                         <p class="card-description">Preencha os campos abaixo para se cadastrar</p>
                     </div>
 
                     <div class="card-content">
                         <form class="form" action="#" method="post" novalidate>
-                            <div class="field">
+                            <div class="field animate__animated animate__fadeInUp reveal-soft reveal-delay-1">
                                 <label for="name">Nome completo</label>
                                 <div class="input-group">
                                     <span class="input-addon" aria-hidden="true">
@@ -45,7 +46,7 @@
                                         pattern="^[a-zA-Z\s]{2,}$" autocomplete="name" required />
                                 </div>
                             </div>
-                            <div class="field">
+                            <div class="field animate__animated animate__fadeInUp reveal-soft reveal-delay-2">
                                 <label for="email">E-mail</label>
                                 <div class="input-group">
                                     <span class="input-addon" aria-hidden="true">
@@ -59,7 +60,7 @@
                                         autocomplete="email" required />
                                 </div>
                             </div>
-                            <div class="field">
+                            <div class="field animate__animated animate__fadeInUp reveal-soft reveal-delay-3">
                                 <div class="two-cols">
                                     <div class="col">
                                         <label for="password">Senha</label>
@@ -108,18 +109,18 @@
                                     </div>
                                 </div>
 
-                                <div class="checkbox-group">
+                                <div class="checkbox-group animate__animated animate__fadeInUp reveal-soft reveal-delay-4">
                                     <input id="terms" name="terms" type="checkbox" required />
                                     <label for="terms">Eu concordo com a <a href="../app/pages/politica-de-privacidade.html">Política de Privacidade</a> e os <a
                                             href="../app/pages/termos-de-uso.html">Termos de Uso</a>.</label>
                                 </div>
 
-                                <button type="submit" class="btn-submit">Cadastrar</button>
-                                <div class="divider" aria-hidden="true">
+                                <button type="submit" class="btn-submit animate__animated animate__fadeInUp reveal-soft reveal-delay-4">Cadastrar</button>
+                                <div class="divider animate__animated animate__fadeInUp reveal-soft reveal-delay-4" aria-hidden="true">
                                     <hr /><span>ou</span>
                                     <hr />
                                 </div>
-                                <p class="signup-prompt">
+                                <p class="signup-prompt animate__animated animate__fadeInUp reveal-soft reveal-delay-4">
                                     Já possui uma conta?
                                     <a href="sign-in.html">Faça login</a>
                                 </p>
@@ -130,8 +131,8 @@
 
         </aside>
 
-        <main>
-            <a href="../index.html" class="back-link">
+        <main class="animate__animated animate__fadeInRight reveal-soft reveal-delay-2">
+            <a href="../index.html" class="back-link animate__animated animate__fadeInDown reveal-soft reveal-delay-1">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="m15 18-6-6 6-6" />
                 </svg>
@@ -139,7 +140,7 @@
             </a>
 
             <img src="../public/image-form.svg" alt="Ilustração de estudantes e um ônibus escolar"
-                class="illustration" />
+                class="illustration animate__animated animate__fadeInRight reveal-soft reveal-delay-3" />
         </main>
     </div>
 
